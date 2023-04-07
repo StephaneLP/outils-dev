@@ -1,0 +1,208 @@
+/*************************************************/
+/* REGLES                                        */
+/*************************************************/
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+
+/*************************************************/
+/* BALISES COMMUNES                              */
+/*************************************************/
+
+body {
+    font-family: "Roboto Regular",Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+main{
+    /* margin: 100px 0 0; */
+    /* border-top: 1px solid; */
+}
+
+h1 {
+    font-family: "Roboto Bold",Arial, Helvetica, sans-serif;
+    color: #6C7E80;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight:900;
+    text-shadow: 0px 5px 5px grey;
+    margin: 40px 0;
+    display: none;
+}
+
+h2, h3 {
+    font-family: "Roboto Bold",Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #bd7b00;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffa600;
+}
+
+/*************************************************/
+/* COMPOSANTS                                    */
+/*************************************************/
+
+.commande {
+    font-family: "courier";
+    display: inline-block;
+    border: 1px solid #1F201F;
+    border-radius: 3px;;
+    padding: 2px 6px;
+}
+
+/*************************************************/
+/* HEADER                                        */
+/*************************************************/
+
+header {
+    width: 100%;
+    min-height: 100px;
+    background-color: #4e5d5f;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 5px 5px grey;
+}
+
+header i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* MENU */
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+header nav ul li {
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+header nav ul li:not(:last-child) {
+    border-right: 1px solid rgb(255, 255, 255);
+}
+
+header nav ul li a {
+    font-weight: 100;
+    text-decoration: none;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+header nav ul li a#active {
+    color: yellow;
+}
+
+/* ANIMATIONS */
+
+header nav ul li a:hover {
+    color: #e7e7e7;
+    transition: color 0.2s;
+}
+
+header nav ul li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #e7e7e7;
+    transition: all 0.2s ease-in;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+/*************************************************/
+/* SECTIONS & ARTICLES                           */
+/*************************************************/
+
+section {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    color: #6C7E80;
+    text-align: center;
+    font-size: 2.2rem;
+
+    text-shadow: 0px 5px 5px lightgrey;
+}
+
+/* ARTICLES */
+
+article {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px grey;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+}
+
+article .article-left {
+    width: 20%;
+    background-color: #D8D3D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article .article-left i {
+    font-size: 10rem;
+    color: #6C7E80
+}
+
+article .article-infos {
+    width: 80%;
+}
+
+article .article-infos .paragraphe {
+    padding: 10px 10px 10px 20px;
+}
+
+article .article-infos .paragraphe h3 {
+    color: #649D8E;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+article .article-infos .paragraphe p {
+    line-height: 1.5rem;
+    margin: 10px;
+}
+
+article .article-infos .paragraphe ul {
+    padding-left: 20px;
+    list-style-type: circle;
+}
+
+article .article-infos .paragraphe ul li {
+    margin-bottom: 5px;
+}
